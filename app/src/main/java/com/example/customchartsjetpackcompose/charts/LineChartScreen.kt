@@ -23,7 +23,6 @@ fun LineChartScreen() {
         Point(2f, 0f),
         Point(3f, 60f),
         Point(4f, 10f),
-
         Point(5f, 70f),
         Point(6f, 90f),
         Point(7f, 5f),
