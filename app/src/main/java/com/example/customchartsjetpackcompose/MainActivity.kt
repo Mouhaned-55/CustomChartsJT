@@ -12,7 +12,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.customchartsjetpackcompose.charts.BarChartScreen
+import com.example.customchartsjetpackcompose.charts.GroupBarChartScreen
 import com.example.customchartsjetpackcompose.charts.LineChartScreen
+import com.example.customchartsjetpackcompose.charts.PieChartScreen
 import com.example.customchartsjetpackcompose.ui.theme.CustomChartsJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +28,7 @@ class MainActivity : ComponentActivity() {
                         .fillMaxSize()
                         .background(MaterialTheme.colors.surface)
                 ) {
-                    LineChartScreen()
+                    PieChartScreen()
                 }
             }
         }
