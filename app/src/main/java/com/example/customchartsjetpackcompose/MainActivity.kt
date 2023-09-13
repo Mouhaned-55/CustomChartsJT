@@ -3,6 +3,7 @@ package com.example.customchartsjetpackcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -17,6 +18,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import com.example.customchartsjetpackcompose.charts.BarChartScreen
 import com.example.customchartsjetpackcompose.charts.BubbleChartScreen
 import com.example.customchartsjetpackcompose.charts.CombinedChartScreen
@@ -58,17 +60,20 @@ class MainActivity : ComponentActivity() {
                     }
                 ) { innerPadding ->
                     val modifier = Modifier.padding(innerPadding)
-                    when (selectedScreen) {
-                        0 -> LineChartScreen()
-                        1 -> PieChartScreen()
-                        2 -> BarChartScreen()
-                        3 -> GroupBarChartScreen()
-                        4 -> DonutChartScreen()
-                        5 -> CombinedChartScreen()
-                        6 -> WaveChartScreen()
-                        7 -> BubbleChartScreen()
-                        else -> LineChartScreen()
+                    Column(modifier.padding(top = 230.dp) ) {
+                        when (selectedScreen) {
+                            0 -> LineChartScreen()
+                            1 -> PieChartScreen()
+                            2 -> BarChartScreen()
+                            3 -> GroupBarChartScreen()
+                            4 -> DonutChartScreen()
+                            5 -> CombinedChartScreen()
+                            6 -> WaveChartScreen()
+                            7 -> BubbleChartScreen()
+                            else -> LineChartScreen()
+                        }
                     }
+
                 }
             }
         }
